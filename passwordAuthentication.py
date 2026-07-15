@@ -4,6 +4,7 @@ users = {}
 def hash_password(password):
     return bcrypt.hashpw(password.encode("utf-8"), bcrypt.gensalt())
 
+
 def verify_password(password, stored_hash):
     return bcrypt.checkpw(password.encode("utf-8"), stored_hash)
 
